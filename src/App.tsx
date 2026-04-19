@@ -13,6 +13,13 @@ const stats = [
   { label: 'Mode', value: 'Black gothic UX' },
 ]
 
+const microCards = [
+  { label: 'Built for', value: 'Canada' },
+  { label: 'Current layer', value: 'City → local' },
+  { label: 'Direction', value: 'Sharper comps' },
+  { label: 'Tone', value: 'Minimal / dark' },
+]
+
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
 const heroVariants: Variants = {
@@ -65,7 +72,7 @@ function App() {
           <div className="hero-copy">
             <span className="hero-pill">Canadian pricing intelligence</span>
             <h1>Sharper home pricing.</h1>
-            <p className="hero-text">From city-level estimates to neighborhood-level accuracy.</p>
+            <p className="hero-text">City to neighborhood.</p>
             <div className="hero-actions">
               <a className="primary-button" href="https://aires-production.up.railway.app//" target="_blank" rel="noreferrer">
                 View phase 1
@@ -88,6 +95,15 @@ function App() {
             </dl>
             <div className="hero-panel-glow" aria-hidden="true" />
           </motion.aside>
+        </motion.section>
+
+        <motion.section className="micro-grid" variants={getCardVariants(1)} {...animate}>
+          {microCards.map((card, index) => (
+            <motion.article className="micro-card section-card" key={card.label} variants={getCardVariants(index)} {...animate}>
+              <p className="panel-label">{card.label}</p>
+              <h3>{card.value}</h3>
+            </motion.article>
+          ))}
         </motion.section>
 
         <motion.section id="roadmap" className="section-card roadmap-card" variants={getCardVariants(2)} {...animate}>

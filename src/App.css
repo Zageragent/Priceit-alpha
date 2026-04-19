@@ -125,10 +125,10 @@
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.72fr);
-  gap: 28px;
-  padding: 44px;
-  margin-bottom: 24px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 24px;
+  padding: 38px;
+  margin-bottom: 20px;
 }
 
 .hero::after {
@@ -155,15 +155,15 @@
 }
 
 .hero-copy h1 {
-  margin: 10px 0 14px;
-  max-width: 8ch;
+  margin: 8px 0 12px;
+  max-width: 9ch;
   text-transform: uppercase;
 }
 
 .hero-text {
-  max-width: 34ch;
+  max-width: 22ch;
   color: var(--text-soft);
-  font-size: 1.06rem;
+  font-size: 0.98rem;
 }
 
 .hero-actions {
@@ -272,6 +272,25 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   margin-bottom: 24px;
+}
+
+.micro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.micro-card {
+  padding: 18px 18px 20px;
+  border-radius: 22px;
+}
+
+.micro-card h3 {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  line-height: 1.18;
+  text-transform: uppercase;
 }
 
 .info-card,
@@ -420,7 +439,8 @@
 
   .hero,
   .feature-grid,
-  .timeline {
+  .timeline,
+  .micro-grid {
     grid-template-columns: 1fr;
   }
 
@@ -429,7 +449,7 @@
   }
 
   .hero-copy h1 {
-    max-width: 13.4ch;
+    max-width: 10ch;
   }
 }
 
