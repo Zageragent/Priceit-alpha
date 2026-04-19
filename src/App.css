@@ -155,13 +155,13 @@
 }
 
 .hero-copy h1 {
-  margin: 14px 0 18px;
-  max-width: 12ch;
+  margin: 10px 0 14px;
+  max-width: 8ch;
   text-transform: uppercase;
 }
 
 .hero-text {
-  max-width: 64ch;
+  max-width: 34ch;
   color: var(--text-soft);
   font-size: 1.06rem;
 }
@@ -345,8 +345,12 @@
 }
 
 .section-heading {
-  max-width: 58ch;
-  margin-bottom: 28px;
+  max-width: 40ch;
+  margin-bottom: 20px;
+}
+
+.compact-heading h2 {
+  max-width: none;
 }
 
 .timeline {
